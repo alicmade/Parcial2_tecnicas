@@ -46,5 +46,18 @@ public class Main {
             }
 
         }*/
+
+
+        /*
+        * Lo que tendria q hacer es crear un usuario y un barco y q el usuario pueda poner el barco en el tablero
+        * luego el siguiente usuario lo mismo
+        *
+        * y luego q se disparen entre ellos
+        *
+        * en las otras clases faltaría crear el tablero y q se pueda poner el barco en el tablero
+        *
+
+        *
+        * */
     }
 }

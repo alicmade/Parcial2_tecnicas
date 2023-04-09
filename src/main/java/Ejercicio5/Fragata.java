@@ -6,6 +6,6 @@ import Ejercicio4.Puntos;
 
 public class Fragata extends Barco {
     public Fragata(Puntos puntoInicial, Puntos puntoFinal, CardinalPoints.CardinalPoint direction, int tamaño) {
-        super(puntoInicial, puntoFinal, direction, tamaño);
+        super(puntoInicial, puntoFinal, tamaño);
     }
 }

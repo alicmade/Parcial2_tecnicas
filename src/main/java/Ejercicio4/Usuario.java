@@ -33,7 +33,7 @@ public class Usuario {
             throw new Exception("El punto no esta en el tablero.");
         }
         for (Barco barco : user.getBarcosTablero()) {
-            if (barco.disparar(punto.x, punto.y)) {
+            if (barco.disparar(punto)) {
                 return true;
             }
         }
@@ -48,8 +48,8 @@ public class Usuario {
             throw new Exception("El punto no esta en el tablero.");
         }
         for (Barco barco : barcosTablero) {
-            if (barco.disparar(punto.x, punto.y)) {
-                barco.hundido()
+            if (barco.disparar(punto)) {
+                barco.hundido();
                 return;
             }
 
@@ -86,7 +86,7 @@ public class Usuario {
         //lo guardo entre dos puntos y asi es mas facil comprobar si en esa zona hay un barco
         Puntos puntoInicial = new Puntos(filaInicial, columnaInicial);
         Puntos puntoFinal = new Puntos(filaFinal, columnaFinal);
-        return new Barco(puntoInicial, puntoFinal, direccion, longitud);
+        return new Barco(puntoInicial, puntoFinal, longitud);
     }
 
     //getters y setters
