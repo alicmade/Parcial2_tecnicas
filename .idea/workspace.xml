@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b185f9-efaa-44c5-b8ef-dd0c3e2399ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Puntos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Ship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Canoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Fragata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Portaaviones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio6/Main.java" afterDir="false" />
+    <list default="true" id="23b185f9-efaa-44c5-b8ef-dd0c3e2399ae" name="Changes" comment="Primer Parte del primer Ejer1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/CardinalPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/CardinalPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Canoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Canoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Fragata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Fragata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Portaaviones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Portaaviones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +70,23 @@
       <option name="presentableId" value="Default" />
       <updated>1680517011954</updated>
       <workItem from="1680517013417" duration="3166000" />
-      <workItem from="1680525014600" duration="10876000" />
+      <workItem from="1680525014600" duration="14579000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer Parte del primer Ejer1">
+      <created>1680790321987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680790321987</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer Parte del primer Ejer1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer Parte del primer Ejer1" />
   </component>
 </project>

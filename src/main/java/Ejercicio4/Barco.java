@@ -1,5 +1,7 @@
 package Ejercicio4;
 
+import static Ejercicio4.CardinalPoints.CardinalPoint.NORTH;
+
 public class Barco {
     //para crear un tablero
     private  final int FILAS = 10;
@@ -12,7 +14,7 @@ public class Barco {
     private Puntos puntoInicial;
     private Puntos puntoFinal;
     //la dirección del barco (vertical u horizontal)
-    CardinalPoints.CardinalPoint direction;
+    protected CardinalPoints.CardinalPoint direction;
     //el tamaño del barco
     private int tamaño;
 
@@ -43,7 +45,7 @@ public class Barco {
     //Método para saber si el barco ya está
     //hundido. Devuelve true si el barco está hundido.
 
-    public boolean hundido(CardinalPoints.CardinalPoint direccion, int fila, int columna) {
+    public boolean hundido() {
         int tamanoBarco = 0;
         int filaInicio = fila;
         int columnaInicio = columna;
@@ -118,7 +120,7 @@ public class Barco {
         // este lo he hecho con chatGPT, ns si esta bien
 
         public boolean recibirDisparo(int fila, int columna) {
-            if (direction == direction.NORTH) {
+            if (direction == NORTH) {
                 if (columna == columnaInicio && fila >= filaInicio && fila <= filaFin) {
                     int indice = fila - filaInicio;
                     impactos[indice] = true;

@@ -3,52 +3,56 @@ package Ejercicio4;
 import java.util.ArrayList;
 
 public class Usuario {
-    String nombre;
-    int puntuacion;
-    Puntos posicion;
-
     ArrayList<Barco> barcosTablero = new ArrayList<>();
+    Barco[] barcos;
     boolean vivo = false;
 
-    public Usuario(String nombre, Barco barco) throws IllegalArgumentException{
+    public Usuario( Barco barco) throws IllegalArgumentException{
         if (barco == null) {
             throw new IllegalArgumentException("El barco no puede ser nulo.");
         }
         barcosTablero.add(barco);
-        this.nombre = nombre;
+
+       // this.barcos =  barcosTablero.toArray(new Barco[barcosTablero.size()]);
     }
 
     public boolean estaVivo() {
-        for (int i = 0; i < barcosTablero.size(); i++) {
-         /*   if (!barcosTablero.get(i).hundido()) {
-                vivo = true;
-            }*/
-        }
         return vivo;
     }
 
-    public void muere() {
-        for (int i = 0; i < barcosTablero.size(); i++) {
-         // barcosTablero.get(i).setPosicion(null);
-        }
+
+    public boolean muere() {
+       return vivo = false;
     }
 
-    public boolean atacar(int x, int y, Usuario user) throws IndexOutOfBoundsException {
-        if (x < 0 || x >= 10 || y < 0 || y >= 10) {
-            throw new IndexOutOfBoundsException("Coordenadas de disparo fuera de los límites del tablero.");
+    public boolean atacar(Puntos punto, Usuario user) throws Exception {
+      if (punto == null || user == null) {
+            throw new IllegalArgumentException("No se perimiten valores nulos.");
         }
-        boolean tocado = false;
-        for (int i = 0; i < user.barcosTablero.size(); i++) {
-            if (user.barcosTablero.get(i).disparar(x, y)) {
-                tocado = true;
+        if (punto.x < 0 || punto.x > 9 || punto.y < 0 || punto.y > 9) {
+            throw new Exception("El punto no esta en el tablero.");
+        }
+        for (Barco barco : user.getBarcosTablero()) {
+            if (barco.disparar(punto.x, punto.y)) {
+                return true;
             }
         }
-        return tocado;
+        return false;
     }
 
-    public void disparo(int x, int y) {
-        for (int i = 0; i < barcosTablero.size(); i++) {
-            barcosTablero.get(i).disparar(x, y);
+    public void disparo(Puntos punto) throws Exception {
+        if (punto == null) {
+            throw new IllegalArgumentException("No se perimiten valores nulos.");
+        }
+        if (punto.x < 0 || punto.x > 9 || punto.y < 0 || punto.y > 9) {
+            throw new Exception("El punto no esta en el tablero.");
+        }
+        for (Barco barco : barcosTablero) {
+            if (barco.disparar(punto.x, punto.y)) {
+                barco.hundido()
+                return;
+            }
+
         }
     }
 
@@ -86,21 +90,6 @@ public class Usuario {
     }
 
     //getters y setters
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getPuntuacion() {
-        return puntuacion;
-    }
-
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
-    }
 
     public ArrayList<Barco> getBarcosTablero() {
         return barcosTablero;
@@ -118,11 +107,4 @@ public class Usuario {
         this.vivo = vivo;
     }
 
-    public Puntos getPosicion() {
-        return posicion;
-    }
-
-    public void setPosicion(Puntos posicion) {
-        this.posicion = posicion;
-    }
 }
