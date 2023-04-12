@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b185f9-efaa-44c5-b8ef-dd0c3e2399ae" name="Changes" comment="Posible Primer Parte del primer Ejer1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Puntos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Puntos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio4/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Canoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Canoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Fragata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Fragata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Portaaviones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio5/Portaaviones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicio6/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="2Nubejpa1RK1wrDI8qNS6d0tw2W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -69,6 +69,7 @@
       <updated>1680517011954</updated>
       <workItem from="1680517013417" duration="3166000" />
       <workItem from="1680525014600" duration="17243000" />
+      <workItem from="1681220077596" duration="6083000" />
     </task>
     <task id="LOCAL-00001" summary="Primer Parte del primer Ejer1">
       <created>1680790321987</created>
