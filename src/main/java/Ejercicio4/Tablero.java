@@ -19,57 +19,181 @@ public class Tablero {
             Arrays.fill(tablero[i], AGUA);
         }
     }
-    public void visualizacion() {
-            for (int i = 0; i < FILAS; i++) {
-                for (int j = 0; j < COLUMNAS; j++) {
-                    System.out.print(tablero[i][j] + " ");
-                }
-                System.out.println();
-            }
-    }
-
     public void depositarBarco(Barco barco) throws Exception {
+        String opcion;
         int filaInicial = barco.getPuntoInicial().getX();
-            int columnaInicial = barco.getPuntoInicial().getY();
+        int columnaInicial = barco.getPuntoInicial().getY();
+        int filaaux;
+        int filaFinal;
+        int columnaaux;
+        int columnaFinal;
+        int repeticiones;
 
+        switch (barco.getDirection()) {
+            case NORTH:
+                // hacia el norte, voy decreciendo en filas
+                filaFinal = filaInicial - barco.getTamaño();
+                if (filaFinal < 0) throw new Exception("El barco no cabe en el tablero.");
+                repeticiones = barco.getTamaño();
+                filaaux = filaInicial - 1;
+                while (repeticiones > 0) {
+                    if (tablero[filaaux][columnaInicial - 1] != AGUA)
+                        throw new Exception("El barco colisiona con otro barco.");
+                    tablero[filaaux][columnaInicial - 1] = BARCO;
+                    filaaux--;
+                    repeticiones--;
+                }
+                break;
+            case SOUTH:
+                // hacia el norte, voy creciendo en filas
+                filaFinal = filaInicial + barco.getTamaño();
+                if (filaFinal >= FILAS) throw new Exception("El barco no cabe en el tablero.");
+                repeticiones = barco.getTamaño();
+                filaaux = filaInicial - 1;
+                while (repeticiones > 0) {
+                    if (tablero[filaaux][columnaInicial - 1] != AGUA)
+                        throw new Exception("El barco colisiona con otro barco.");
+                    tablero[filaaux][columnaInicial - 1] = BARCO;
+                    filaaux++;
+                    repeticiones--;
+                }
+                break;
+            case EAST:
+                // hacia el este, voy creciendo en columnas
+                columnaFinal = columnaInicial + barco.getTamaño();
+                if (columnaFinal >= COLUMNAS) throw new Exception("El barco no cabe en el tablero.");
+                repeticiones = barco.getTamaño();
+                columnaaux = columnaInicial - 1;
+                while (repeticiones > 0) {
+                    if (tablero[filaInicial - 1][columnaaux] != AGUA)
+                        throw new Exception("El barco colisiona con otro barco.");
+                    tablero[filaInicial - 1][columnaaux] = BARCO;
+                    columnaaux++;
+                    repeticiones--;
+                }
+                break;
+            case WEST:
+                // hacia el oeste, voy decreciendo en columnas
+                columnaFinal = columnaInicial - barco.getTamaño();
+                if (columnaFinal < 0) throw new Exception("El barco no cabe en el tablero.");
+                repeticiones = barco.getTamaño();
+                columnaaux = columnaInicial - 1;
+                while (repeticiones > 0) {
+                    if (tablero[filaInicial - 1][columnaaux] != AGUA)
+                        throw new Exception("El barco colisiona con otro barco.");
+                    tablero[filaInicial - 1][columnaaux] = BARCO;
+                    columnaaux--;
+                    repeticiones--;
+                }
+                break;
+        }
+    }
+     /*public void depositarBarco(Barco barco) throws Exception {
+
+             /* String opcion;
+            int filaInicial = barco.getPuntoInicial().getX();
+            int columnaInicial = barco.getPuntoInicial().getY();
+            if (barco.getDirection().equals(NORTH) || barco.getDirection().equals(SOUTH)) {
+               opcion= "horizontal";
+            } else {
+                 opcion= "vertical";
+            }
+            switch (opcion){
+                case "horizontal":
+                    for (int i = 0 ; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        filaInicial++;
+                        if (i >= FILAS || tablero[i][columnaInicial] != AGUA) {
+                            throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
+                        }
+                    }
+                    break;
+                case "vertical":
+                    for (int i = 0; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        columnaInicial ++;
+                        if (i >= FILAS || tablero[i][columnaInicial] != AGUA) {
+                            throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
+                        }
+                    }
+                    break;
+
+            }
 
             switch (barco.getDirection()) {
                 case NORTH:
-                    for (int i = barco.getPuntoInicial().getX(); i <= barco.getTamaño(); i++) {
-                        if (i >= COLUMNAS || tablero[filaInicial][i] != AGUA) {
-                            throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
-                        }
-                        tablero[i][columnaInicial] = BARCO;
+                   for (int i = 0 ; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        filaInicial++;
                     }
                     break;
                 case SOUTH:
-                    for (int i = barco.getPuntoInicial().getX(); i >= barco.getTamaño(); i--) {
-                        if (i >= COLUMNAS || tablero[filaInicial][i] != AGUA) {
-                            throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
-                        }
-                        tablero[i][columnaInicial] = BARCO;
+                    for (int i = 0; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        filaInicial ++;
                     }
                     break;
                 case EAST:
-                    for (int i = barco.getPuntoInicial().getY(); i <= barco.getTamaño(); i++) {
-                        tablero[filaInicial][i] = BARCO;
+                    for (int i = 0; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        columnaInicial++;
                         if (i >= FILAS || tablero[i][columnaInicial] != AGUA) {
                             throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
                         }
                     }
                     break;
                 case WEST:
-                    for (int i = barco.getPuntoInicial().getY(); i >= barco.getTamaño(); i--) {
+                    for (int i = 0; i <= barco.getTamaño()-1; i++) {
+                        tablero[filaInicial-1][columnaInicial-1] = BARCO;
+                        columnaInicial++;
                         if (i >= FILAS || tablero[i][columnaInicial] != AGUA) {
                             throw new Exception("El barco no cabe en el tablero o colisiona con otro barco.");
                         }
-                        tablero[filaInicial][i] = BARCO;
                     }
                     break;
+            }*/
+
+
+    public void visualizarTablero() {
+        for (int i = 0; i < FILAS; i++) {
+            for (int j = 0; j < COLUMNAS; j++) {
+                System.out.print(tablero[i][j] + " ");
             }
+            System.out.println();
+        }
     }
 
-/*
+    public void marcarImpacto(Puntos punto) {
+        int fila = punto.getX();
+        int columna = punto.getY();
+        tablero[fila-1][columna-1] = 'X';
+    }
+
+    public static char getBARCO() {
+        return BARCO;
+    }
+
+    public static void setBARCO(char BARCO) {
+        Tablero.BARCO = BARCO;
+    }
+
+    public static char getBarcoHumano() {
+        return barcoHumano;
+    }
+
+    public static void setBarcoHumano(char barcoHumano) {
+        Tablero.barcoHumano = barcoHumano;
+    }
+
+    public static char[][] getTablero() {
+        return tablero;
+    }
+
+    public static void setTablero(char[][] tablero) {
+        Tablero.tablero = tablero;
+    }
+
+    /*
 
     private static char[][] tableroHumano;
 
